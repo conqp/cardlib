@@ -8,7 +8,7 @@ pub struct Card {
 }
 
 impl Card {
-    pub fn new(suit: Suit, face: Face) -> Self {
+    pub const fn new(suit: Suit, face: Face) -> Self {
         Self { suit, face }
     }
 
