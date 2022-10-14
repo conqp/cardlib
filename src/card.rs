@@ -7,6 +7,20 @@ pub struct Card {
     face: Face,
 }
 
+impl Card {
+    pub fn new(suit: Suit, face: Face) -> Self {
+        Self { suit, face }
+    }
+
+    pub fn suit(&self) -> &Suit {
+        &self.suit
+    }
+
+    pub fn face(&self) -> &Face {
+        &self.face
+    }
+}
+
 impl ToString for Card {
     fn to_string(&self) -> String {
         match (&self.suit, &self.face) {
@@ -15,7 +29,7 @@ impl ToString for Card {
             (Suit::Diamonds, Face::Three) => "🃃".to_string(),
             (Suit::Diamonds, Face::Four) => "🃄".to_string(),
             (Suit::Diamonds, Face::Five) => "🃅".to_string(),
-            (Suit::Diamonds, Face::Six) =>  "🃆".to_string(),
+            (Suit::Diamonds, Face::Six) => "🃆".to_string(),
             (Suit::Diamonds, Face::Seven) => "🃇".to_string(),
             (Suit::Diamonds, Face::Eight) => "🃈".to_string(),
             (Suit::Diamonds, Face::Nine) => "🃉".to_string(),
