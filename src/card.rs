@@ -1,6 +1,6 @@
-use std::fmt::{Display, Formatter};
 use crate::face::Face;
 use crate::suit::Suit;
+use std::fmt::{Display, Formatter};
 
 #[derive(Debug, Eq, PartialEq)]
 pub struct Card {
